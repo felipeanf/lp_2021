@@ -1,0 +1,11 @@
+a. O erro ocorre pois existem vários ";" sendo utilizados além da finalização da linha, apenas um ";"
+deve ser usado para delimitar a expressão e o token deve ser utilizado apenas para este fim, como os 3 
+últimos tokens ";" não são usados para esse fim, o interpretador retorna o erro.   
+
+b. Standar ML não permite a operação entre entre componentes de domínios diferentes. Nesse caso está 
+sendo realizada a operação entre números inteiros e números reais, como na expressão o número inteiro
+vem primeiro, o interpretador infere que o domínio de operação é int * int, mas, os operandos são int * real.
+
+c. Esse erro ocorre por que o caso geral (fact n) é definido antes do caso particualr (fact 0), de modo que 
+(fact n e fact 0 são reduntandes, como 0 também satisfaz o n, fact 0 se torna redundante. É preciso inverter
+ a ordem das opções de retorno para que funcione.
